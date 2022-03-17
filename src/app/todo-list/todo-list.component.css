@@ -1,0 +1,24 @@
+h1{
+  font-size: 25px;
+}
+h2{
+  font-size: 25px;
+}
+li{
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+}
+.caixinhaformulario {
+    height: 45px;
+    width: 200px;
+  }
+.botaoadicionar {
+      color: rgba(2, 2, 2, 0.281);
+  }
+.botaodeletar {
+    color: rgb(12, 11, 12)
+  }
+.botaoadicionar {
+  color:rgb(12, 11, 12);
+}

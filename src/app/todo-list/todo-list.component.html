@@ -1,0 +1,33 @@
+  <div class="container">
+          <div class="listadetarefas">  
+            <h1 [ngStyle]="{color:'gray'}">Lista de tarefas</h1>
+          <form>
+              <input type="text" class="caixinhaformulario" name="item" 
+              [(ngModel)]="itemToAdd" placeholder="Adicionar tarefa"><br>
+              <button [ngStyle]="{backgroundColor:'pink', height:'40x', width:'200px'}" mat-raised-button class="botaoadicionar" (click)="addToList()">Adicionar</button>     
+          </form>
+            <ul>
+              <li *ngFor="let item of todoList; let i = index">
+                <div class="checkbox">
+                    <label>
+                    <input type="checkbox" (click)="doItem(i)" />{{item}}</label>
+                    <button mat-icon-button (click)="excluiTarefa(i)"><mat-icon>delete</mat-icon></button>
+                </div>
+              </li>
+            </ul>
+            <br>
+            <h2 [ngStyle]="{color:'gray'}">Tarefas feitas</h2>
+            <ul>
+              <li class *ngFor="let item of doneList">
+                <div>
+                  <label>
+                    <input type="checkbox" checked/><span style="text-decoration:line-through;">
+                      {{item}}
+                    </span>
+                  </label> 
+                </div>
+              </li>
+            </ul>
+          <button class="botaodeletar" [ngStyle]="{backgroundColor:'pink', height:'40px', width:'200px'}" mat-raised-button value="" (click)="excluirTodasTarefas()"><mat-icon>delete</mat-icon></button> 
+          </div>
+        </div>
